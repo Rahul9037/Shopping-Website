@@ -28,7 +28,7 @@ class App extends Component {
               id: snaShot.id,
               ...snaShot.data()
             }
-          }, () => { console.log(this.state) })
+          })
         })
       }
       this.setState({ currentUser: userAuth })
