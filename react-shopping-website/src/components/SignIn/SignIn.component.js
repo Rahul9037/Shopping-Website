@@ -27,9 +27,10 @@ class SignIn extends Component {
     }
 
     render() {
+        const { email ,password} = this.state;
         return (
             <div className="sign-in">
-                <h2>I already have an account</h2>
+                <h2 className="title">I already have an account</h2>
                 <span>Login with your email and password</span>
                 <form onSubmit={this.handleSubmit}>
                     <FormInput
@@ -37,7 +38,7 @@ class SignIn extends Component {
                         name="email"
                         handleChange={this.handleChange}
                         label="Email"
-                        value={this.state.email}
+                        value={email}
                         required
                     />
                     <FormInput
@@ -45,7 +46,7 @@ class SignIn extends Component {
                         name="password"
                         handleChange={this.handleChange}
                         label="Password"
-                        value={this.state.password}
+                        value={password}
                         required
                     />
                     <div className="signIn-button">

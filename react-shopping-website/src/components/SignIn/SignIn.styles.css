@@ -4,6 +4,10 @@
     flex-direction: column;
 }
 
+.sign-in .title {
+    margin: 10px 0;
+}
+
 .sign-in .custom-button {
     background-color: black;
     color: white;
