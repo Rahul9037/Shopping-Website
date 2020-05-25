@@ -1,9 +1,9 @@
-import { TOGGLE_CART_DROPDOWN, ADD_ITEM } from '../../types/types';
-import { addItemsToCart } from './cart.utils';
+import { TOGGLE_CART_DROPDOWN, ADD_ITEM, REMOVE_ITEM ,CLEAR_ITEM_FROM_CART } from '../../types/types';
+import { addItemsToCart ,removeItemFromCart } from './cart.utils';
 
 const INITIAL_STATE = {
     hidden: 'true',
-    cartItems : []
+    cartItems: []
 }
 
 const CartReducer = (state = INITIAL_STATE, action) => {
@@ -15,11 +15,23 @@ const CartReducer = (state = INITIAL_STATE, action) => {
                 hidden: !state.hidden
             }
 
-        case ADD_ITEM : 
-        return {
-            ...state,
-            cartItems : addItemsToCart(state.cartItems , action.data)
-        }
+        case ADD_ITEM:
+            return {
+                ...state,
+                cartItems: addItemsToCart(state.cartItems, action.data)
+            }
+        
+        case CLEAR_ITEM_FROM_CART :
+            return {
+                ...state,
+                cartItems : state.cartItems.filter( CartItem => CartItem.id !== action.data.id )
+            }
+        
+        case REMOVE_ITEM :
+            return{
+                ...state,
+                cartItems : removeItemFromCart(state.cartItems , action.data)
+            }
         default:
             return state
     }

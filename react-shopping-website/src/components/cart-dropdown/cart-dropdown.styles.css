@@ -19,6 +19,11 @@
     overflow: scroll;
 }
 
+.cart-dropdown .cart-items .empty-cart {
+    font-size: 18px;
+    margin: 50px auto;
+}
+
 .cart-dropdown .custom-button {
     margin-top: auto;
     background-color: black;
