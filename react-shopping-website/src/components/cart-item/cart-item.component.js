@@ -9,7 +9,7 @@ const CartItem = ({cartItem}) => {
             <div className="image" style={{ backgroundImage: `url(${imageUrl})` }} />
             <div className="quantity">
                 <span>{name}</span>
-                <span>{quantity} × ${price}</span>
+                <span>{quantity} × INR {price}</span>
                 
             </div>
         </div>

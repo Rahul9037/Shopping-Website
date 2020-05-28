@@ -16,7 +16,7 @@ const CollectionItem = ({ item ,  addItem}) => {
                     {name}
                 </div>
                 <div className="price">
-                    ${price}
+                    INR{price}
                 </div>
             </div>
         </div>

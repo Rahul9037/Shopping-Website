@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as Logo } from '../assets/victoriasSecretLogo.svg'
+import { ReactComponent as Logo } from '../assets/shoppinglogo.svg'
 import { Link } from 'react-router-dom';
 import './header.styles.css';
 import { auth } from '../../firebase/firebase.utils';
