@@ -37,7 +37,7 @@ const CheckoutPage = ({ cartItems, total }) => (
     ))}
     <div className='total'>TOTAL: INR{total}</div>
     <div className="test-warning">
-      *Please use the below details for Payment test*
+      **Please use the below details for Payment test**
       <br></br>
       4242 4242 4242 4242 - 06/20 - 123
     </div>
